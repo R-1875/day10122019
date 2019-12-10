@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript">
+function getCheckboxValues(form) {
+  var values = [];
+  var vehicles = form.vehicle;
+
+  for (var i=0, iLen=vehicles.length; i<iLen; i++) {
+    if (vehicles[i].checked) {
+      values.push(vehicles[i].value);
+    }
+  }
+  // Do something with values
+  alert("Language: " + values.join(', '));
+  return values;
+}
+
+</script>
+
+<form onsubmit="getCheckboxValues(this); return false;">
+  Html: <input type="radio" name="vehicle" value="html"><br>
+  C++: <input type="radio" name="vehicle" value="C++"><br>
+ Js: <input type="radio" name="vehicle" value="javascript"><br>
+  <input type="reset"> <input type="submit">
+</form>
