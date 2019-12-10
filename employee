@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+
+	<!-- <p id="p1">this is a place holder1</p>
+	<p id="p2" name="pp2" >this is a place holder 2</p>
+	<input type ="button" name="b1" id="bb1" onclick="AssignTheValue()" value="click me">
+	<script type="text/javascript">
+		function AssignTheValue(){
+			document.getElementById("p1").innerHTML="this is upasana calling";
+			document.getElementByName("pp2").innerHTML="this is rahul calling";
+			 function addNumbers()
+                {
+                        var val1 = parseInt(document.getElementById("value1").value);
+                        var val2 = parseInt(document.getElementById("value2").value);
+                        var ansD = document.getElementById("answer");
+                        ansD.value = val1 + val2;
+                }
+		}
+
+
+
+<script>
+	function addNumbers()
+                {
+                        var val1 = parseInt(document.getElementById("value1").value);
+                        var val2 = parseInt(document.getElementById("value2").value);
+                        var ansD = document.getElementById("answer");
+                    
+                     ansD.value = val1 + val2;
+                     
+
+
+                }
+                function multiNumbers()
+                {
+                        var val1 = parseInt(document.getElementById("value1").value);
+                        var val2 = parseInt(document.getElementById("value2").value);
+                       
+                        var multi=document.getElementById("multianswer")
+                
+               multi.value=val1*val2;
+
+
+                }
+                function subNumbers()
+                {
+                        var val1 = parseInt(document.getElementById("value1").value);
+                        var val2 = parseInt(document.getElementById("value2").value);
+                
+                        var sub=document.getElementById("sub")
+                     
+                       sub.value=val1-val2;
+
+
+                }
+                function divNumbers()
+                {
+                        var val1 = parseInt(document.getElementById("value1").value);
+                        var val2 = parseInt(document.getElementById("value2").value);
+                       
+                        var div=document.getElementById("division")
+                       
+                        div.value=val1/val2;
+
+
+                }
+
+
+   </script>
+  </head>
+  <body>
+        value1 = <input type="text" id="value1" name="value1" value=""/>
+        value2 = <input type="text" id="value2" name="value2" value=""/>
+        <input type="button" name="Sumbit" value="Click here" onclick="javascript:multiNumbers() "/>
+
+        Answer = <input type="text" id="multianswer" name="multianswer" value=""/>
+                <br><br><br><br><br>
+
+      <input type="button" name="Sumbit" value="Click here" onclick="javascript:subNumbers() "/>
+        <br><br><br><br><br>
+        Answer = <input type="text" id="sub" name="sub" value=""/>
+ 
+        <input type="button" name="Sumbit" value="Click here" onclick="javascript:addNumbers() "/>
+          <br><br><br><br><br>
+        Answer = <input type="text" id="answer" name="answer" value=""/>
+
+        <input type="button" name="Sumbit" value="Click here" onclick="javascript:divNumbers()"/>
+          <br><br><br><br><br>
+        Answer = <input type="text" id="division" name="division" value=""/>
+       
+
+
+
+	<p id="p"  >this is a place holder 2</p>
+
+	<input type ="button" name=""  onclick="show()" value="click me">
+	<script type="text/javascript">
+
+		function show(){
+      var students=["rahul","uppu","afdad","ifbai"];
+      var text="";
+      for(var i=0 ;i<students.length;i++)
+      {
+      	text+=students[i]+ "<br>";
+
+      }
+      document.getElementById("p").innerHTML=text;
+}
+		
+
+</script>
+
+
+ <head>
+<title>
+		
+\\\array\\\
+
+	</title>
+
+	<script type="text/javascript">
+		var students = new Array("uppassna","rahul","suraj","ervin","bring");
+		Array.prototype.displayItems=function(){
+			document.write(this[i] + "<br/>");
+		}
+		
+document.write("student array <br/>");
+students.displayItems();
+document.write("<br/> the number of items in students array is"+ students.length + "<br/>");
+document.write("<br/> the sorted students array </br>");
+students.sort();
+students.displayItems();
+document.write("<br/> the students array after removing the last item <br/>");
+students.pop();
+students.displayItems();
+document.write("<br/>" the students array after push "<br/>");
+students.push("new stuff");
+students.displayItems();
+
+
+	</script>
+</head>
+</body>
+ 
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Radio JS</title>
+</head>
+<body>
+	<div id="wrapper"></div>
+	<input type="button" onclick="rd()" value="Click"></input>
+	<script type="text/javascript">
+		function rd() {
+			var myArray = ["Asian", "Thai", "Korean", "Chinese", "Mexican"];
+
+			var wrapper = document.getElementById('wrapper');
+
+   			var elementsToInsert = [];
+
+
+			for(var i = 0; i < myArray.length; i++) {
+			  var radio = document.createElement('input');
+			  var label = document.createElement('label');
+			  radio.type = 'radio';
+			  radio.name = myArray[i];
+			  radio.value = myArray[i];
+
+			  label.setAttribute("for", myArray[i]);
+			  label.innerHTML = myArray[i];
+
+			  elementsToInsert.push({ label: label, radio: radio });
+			}
+
+
+			while(elementsToInsert.length !== 0) {
+			  var randomIndex = Math.floor(Math.random() * elementsToInsert.length);
+
+			 
+			  var toInsert = elementsToInsert.splice(randomIndex, 1)[0];
+
+			  wrapper.appendChild(toInsert.label);
+			  wrapper.appendChild(toInsert.radio);
+			}
+		}-->
+		<!DOCTYPE html>
+<html>
+<head>
+	<title>StudentsAverage</title>
+	<script type="text/javascript">
+		var employee=new Object();
+		employee.ffname="John Wick";
+		employee.id=456;
+		employee.fixed=500000;
+		employee.variable=100000;
+		employee.bonus=50000;
+
+		employee.montlySalary=function () {
+			return(employee.fixed+employee.variable)/12;
+		};
+
+		employee.yearlySalary=function () {
+			return((employee.fixed+employee.variable)*12)+employee.bonus;
+		};
+
+		employee.display=function () {
+			document.write("Employee name=: "+employee.ffname+"<br>")
+			document.write("Employee id: "+employee.id+"<br>");
+			var ms=employee.montlySalary();
+			var ys=employee.yearlySalary();
+			document.write("Monthly Salary: "+ms+"<br>");
+			document.write("Yearly Salary: "+ys+"<br>");
+		}
+
+		employee.display();
+	</script>
+</head>
+<body>
+
+</body>
+</html>
+
+	</script>
+</body>
+</html>
